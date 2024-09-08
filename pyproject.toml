@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "aads"
+name = "bmstu_algorithms"
 version = "2024.09"
 description = "Алгоритмы и структуры данных"
 authors = ["askras <askrasnikov@gmail.com>"]
@@ -13,6 +13,7 @@ notebook = "^7.2.2"
 jupytext = "^1.16.4"
 jupyterlab-rise = "^0.42.0"
 matplotlib = "^3.9.2"
+jsonschema = "^4.23.0"
 
 [tool.poetry.group.dev.dependencies]
 poetry-exec-plugin = "^0.3.6"
@@ -20,3 +21,12 @@ poetry-exec-plugin = "^0.3.6"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+#======================================================================================================================
+# Jupytext: Jupyter notebooks as Markdown documents, Julia, Python or R scripts
+# https://github.com/mwouts/jupytext
+#======================================================================================================================
+[tool.jupytext]
+#notebook_extensions = "md"
+formats = "ipynb,md"
