@@ -1,0 +1,84 @@
+\documentclass[tikz, margin=3mm]{standalone}
+\usetikzlibrary{shadows}
+\usepackage[edges]{forest}
+
+\usepackage[utf8x]{inputenc} % Включаем поддержку UTF8
+\usepackage[russian]{babel}  % Включаем пакет для поддержки русского языка
+
+
+\begin{document}
+    \begin{forest}
+        for tree={% style of tree nodes
+            draw, semithick, rounded corners, drop shadow,
+            top color = gray!20,
+            bottom color = gray!40,
+            text width = 28mm, text badly centered,
+            % style of tree (edges, distances, direction)
+            edge = {draw, semithick},
+            anchor = east,
+            grow = east,
+            forked edge,    % for forked edge
+            s sep = 4mm,    % sibling distance
+            l sep = 8mm,    % level distance
+            fork sep = 4mm, % distance from parent to branching point
+        }
+        [Методы сортировки
+        %
+        [Непрактичные
+        %%
+        [Бесполезная сортировка (Bogosort)]
+        [Сортировка по частям (Блуждающая сортировка) (Stooge sort)]
+        [Блинная (Pancake sorting)]
+        [Медленная (Slowsort)]
+        ]
+        %
+        [Прочие
+        %%
+        [Топологическая сортировка]
+        [Сеть сортировки (Sorting network)]
+        [Битонная сортировка (Bitonic sorter)]
+        ]
+        %
+        [Гибридные
+        %%
+        [Интроспективная сортировка (Introsort)]
+        [Timsort]
+        ]
+        %
+        [Без сравнений
+        %%
+        [Подсчетом]
+        [Блочная]
+        ]
+        %
+        [Слиянием
+        %%
+        [Слиянием]
+        ]
+        %
+        [Вставками
+        %%
+        [Вставками]
+        [Шелла]
+        [Деревом]
+        ]
+        %
+        [Выбором
+        %%
+        [Выбором]
+        [Пирамидальная]
+        [Плавная]
+        ]
+        %
+        [Обменные
+        [Пузырьком]
+        [Перемешиванием]
+        [Гномья]
+        [Быстрая]
+        [Расчёской]
+        [Сортировка чет-нечет]
+        [Поразрядная]
+        ]
+        ]
+    \end{forest}
+\end{document}
