@@ -31,7 +31,9 @@ jupyter:
 Жесткий дедлайн (5 баллов): 17.10.2024
 <!-- #endregion -->
 
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 ### Теоретические сведения
+<!-- #endregion -->
 
 <!-- #region jp-MarkdownHeadingCollapsed=true -->
 При обработке данных в ЭВМ важно знать и информационное поле элемента, и его размещение в памяти машины. 
@@ -133,7 +135,7 @@ $f(а_{k_1}) \leqslant f(а_{k_2}) \leqslant ... \leqslant f(а_{k_n})$.
     <img src="./img/method_sort.png" alt>
 </p>
 <p style="text-align:center">
-    <em>Рисунок 1. Некоторые виды сортировки</em>
+    <em>Рисунок 1. Некоторые виды сортировки</em> 
 </p>
 <!-- #endregion -->
 
