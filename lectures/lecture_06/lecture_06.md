@@ -33,7 +33,7 @@ import doctest
 <!-- #region editable=true slideshow={"slide_type": "slide"} -->
 ## План лекции
 1. Массив
-2. Расширенный массив (Вектор)
+2. Улучшеный массив (Вектор)
 3. Динамический массив
 <!-- #endregion -->
 
