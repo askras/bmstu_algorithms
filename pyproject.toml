@@ -23,6 +23,21 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 
+[tool.poetry-exec-plugin.commands]
+
+spyder = """
+spyder --workdir=./ --window-title bmstu_machinelearning --project ./ --conf-dir ./.config/spyder-py3
+"""
+
+freeze = "poetry export --format requirements.txt --output requirements.txt --without-hashes"
+
+jupyter = """
+export JUPYTERLAB_SETTINGS_DIR=./.jupyter/lab/user-settings
+#export JUPYTERLAB_WORKSPACES_DIR=./.jupyter/lab/workspaces
+python -m jupyter lab --allow-root --NotebookApp.token='' --NotebookApp.password=''
+"""
+
+
 #======================================================================================================================
 # Jupytext: Jupyter notebooks as Markdown documents, Julia, Python or R scripts
 # https://github.com/mwouts/jupytext
