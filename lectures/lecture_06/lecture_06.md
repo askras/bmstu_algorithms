@@ -25,7 +25,7 @@ jupyter:
 <!-- #endregion -->
 
 ```python editable=true slideshow={"slide_type": ""}
-from typing import Any
+from typing import Any, Self
 
 import doctest
 ```
@@ -147,7 +147,7 @@ class Array:
     ''' 
 
 
-    def __init__(self, capacity: int) -> 'Array':
+    def __init__(self, capacity: int) -> Self:
         '''Возвращает пустой массив размером capacity'''
         self._size = 0
         self._capacity = capacity
@@ -194,6 +194,10 @@ class Array:
 
 
 doctest.testmod()
+```
+
+```python
+
 ```
 
 | Операция | Сложность |
@@ -291,7 +295,7 @@ class ExArray(Array):
         self.set_element_at_index(index, element)
         self._inc_size(index)
     
-    def remove_element_at_index(self, index: int) -> 'Any':
+    def remove_element_at_index(self, index: int) -> Any:
         '''Удаляет элемент с индексом `index`'''
         for i in range(index, self._capacity-1):
             self.set_element_at_index(i, self.get_element_at_index(i+1))
@@ -318,7 +322,7 @@ doctest.testmod()
 | `insert_element_at_index` | $O(n)$ |
 | `remove_element_at_index` | $O(n)$ |
 
-При более детальном рассмотрении методов `insert_element_at_index(index, element)` и `remove_element_at_index(index)` можно определить, что время выполнения каждого из них равно $O(n - index + l)$, так как в ходе исполнения программы перемещаются только элементы с индексом `index` и выше. 
+При более детальном рассмотрении методов `insert_element_at_index(index, element)` и `remove_element_at_index(index)` можно определить, что время выполнения каждого из них равно $O(n - index + 1)$, так как в ходе исполнения программы перемещаются только элементы с индексом `index` и выше. 
 Таким образом, для добавления или удаления элемента в конце вектора с помощью методов `insert_element_at_index(index, element)` и `remove_element_at_index(index)` необходимо время $O(1)$.
 
 <!-- #region editable=true slideshow={"slide_type": ""} -->
@@ -412,10 +416,10 @@ class DynamicArray(ExArray):
     '''
 
 
-    def __init__(self, capacity: int = 10) -> 'Array':
+    def __init__(self, capacity: int = 10) -> Self:
         super().__init__(capacity)
    
-    def resize(self, capacity: int) -> 'Array':
+    def resize(self, capacity: int) -> Self:
         '''Изменение размера массива'''
         self._capacity = capacity # Могут быть и другие стратегии
         temp_array = self._capacity * [None]
@@ -431,7 +435,7 @@ class DynamicArray(ExArray):
         # Вызываем метод суперкласс без изменений
         super().insert_element_at_index(index, element)
         
-    def remove_element_at_index(self, index: int) -> 'Any':
+    def remove_element_at_index(self, index: int) -> Any:
         # Вызываем метод суперкласс без изменений
         super().remove_element_at_index(index)
         # При необходимости увеличиваем размер массива
