@@ -153,7 +153,7 @@ node1
 
 ```python editable=true slideshow={"slide_type": ""}
 def print_list(node):
-    while node:
+    while node is not None:
         print(node)
         node = node.next
 
@@ -341,7 +341,7 @@ print(list1)
 
 | Операция     | 1й узел | $k$й узел | $n$й узел |
 |--------------|---------|-----------|-----------|
-|`get_size`    | $O(1)$  | $O(n)$    | $O(n)$    |
+|`get_size`    | $O(n)$  | $O(n)$    | $O(n)$    |
 |`find_node`   | $O(1)$  | $O(n)$    | $O(n)$    |
 |`replace_node`| $O(1)$  | $O(1)^*$  | $O(n)$    |
 |`remove_node` | $O(1)$  | $O(n)$    | $O(n)$    |
