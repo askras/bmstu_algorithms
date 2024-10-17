@@ -190,7 +190,7 @@ jupyter:
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": "slide"} -->
-## Дек 
+## Дек (Deque)
 
 Дек &mdash; это структура данных в которой все операции вставки и удаления (и, как правило, операции доступа к данным) выполняются с обоих концов.
 
@@ -219,7 +219,7 @@ jupyter:
 
 **Основные методы**
 
-- **`init() -> Queue`**
+- **`init() -> Deque`**
 <br>Возвращает пустую очередь.
 
 - **`insert_left(ValueType value) -> None`**
@@ -258,7 +258,7 @@ jupyter:
 ![](./img/deque_railway.png)
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": ""} -->
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
 ### Реализация дека
 - на основе массива
 - на основе двусвязного списка
