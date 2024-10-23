@@ -32,8 +32,8 @@ spyder --workdir=./ --window-title bmstu_machinelearning --project ./ --conf-dir
 freeze = "poetry export --format requirements.txt --output requirements.txt --without-hashes"
 
 jupyter = """
-export JUPYTERLAB_SETTINGS_DIR=./.jupyter/lab/user-settings
-#export JUPYTERLAB_WORKSPACES_DIR=./.jupyter/lab/workspaces
+export JUPYTERLAB_SETTINGS_DIR=./.jupyterlab_config/user-settings
+export JUPYTERLAB_WORKSPACES_DIR=./.jupyterlab_config/workspaces
 python -m jupyter lab --allow-root --NotebookApp.token='' --NotebookApp.password=''
 """
 
