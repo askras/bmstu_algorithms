@@ -1,6 +1,6 @@
 # Jupyter
 *.ipynb
-
+.idea
 # Poetry
 poetry.lock
 
