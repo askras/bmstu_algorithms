@@ -50,8 +50,7 @@ jupyter:
 
 <!-- #region editable=true slideshow={"slide_type": "subslide"} -->
 #### Конечная рекурсивная функция
-Конечная рекурсивная функция задаётся таким образом, чтобы для любого конечного аргумента за конечное число рекурсивных обращений привести к одному из отдельно определённых частных случаев, вычисляемых без рекурсии.
-еотрицательного числа.
+Конечная рекурсивная функция задаётся таким образом, чтобы для любого конечного аргумента за конечное число рекурсивных обращений привести к одному из отдельно определённых частных случаев, вычисляемых без рекурсии неотрицательного числа.
 
 **Факториал целого неотрицательного числа**:
 $$n!={\begin{cases}n\cdot (n-1)!,&n>0\\1,&n=0\end{cases}}$$
@@ -435,7 +434,7 @@ def binary_search_recursive(arr, target, left, right):
 
 # Пример использования:
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-target = 7
+target = 4
 result = binary_search_recursive(arr, target, 0, len(arr) - 1)
 print(f"Элемент найден на позиции: {result}")
 ```
@@ -511,7 +510,7 @@ def fibonacci_v1(n):
     else:
         return fibonacci_v1(n - 1) + fibonacci_v1(n - 2)
 
-fibonacci_v1(5)
+fibonacci_v1(10)
 ```
 
 ```python editable=true slideshow={"slide_type": "fragment"}
@@ -584,7 +583,7 @@ def fibonacci_v3(n):
         memo[n] = fibonacci_v3(n - 1) + fibonacci_v3(n - 2)
     return memo[n]
 
-fibonacci_v3(10)
+fibonacci_v3(5)
 ```
 
 ```python editable=true slideshow={"slide_type": "subslide"}
@@ -644,7 +643,7 @@ def fibonacci_v5(n):
         last, next_ = next_, last + next_
     return next_
 
-fibonacci_v5(5)
+fibonacci_v5(125)
 ```
 
 <!-- #region editable=true slideshow={"slide_type": "subslide"} -->
