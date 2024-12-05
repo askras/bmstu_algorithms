@@ -100,6 +100,19 @@ assert gcd_naive(48, 18) == 6
 assert gcd_naive(10, 3) == 1
 ```
 
+```python editable=true slideshow={"slide_type": "fragment"}
+def gcd_naive(a, b):
+    """Вернуть наибольший общий делитель двух чисел"""
+    gcd = 1
+    for i in range(min(a, b), 0, -1):
+        if a % i == 0 and b % i == 0:
+            return i
+
+# Тесты:
+assert gcd_naive(48, 18) == 6
+assert gcd_naive(10, 3) == 1
+```
+
 <!-- #region editable=true slideshow={"slide_type": "subslide"} -->
 #### Поиск подстроки в строке
 
